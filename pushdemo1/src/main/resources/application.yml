@@ -1,0 +1,36 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver  # MYSQL 5 \u7684\u5199\u6CD5\uFF1Acom.mysql.jdbc.Driver\u3002  MYSQL 6+ \u7684\u5199\u6CD5\uFF1Acom.mysql.cj.jdbc.Driver'
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/shujuku?useUnicode=true&characterEncoding=utf8
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.entity
+
+
+
+#\u6307\u5B9Alogback-spring.xml\u6587\u4EF6\u7684\u4F4D\u7F6E
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    org:
+      springframework: debug
+
+
+
+#pagehelper\u5206\u9875\u63D2\u4EF6\u914D\u7F6E
+pagehelper:
+helperDialect: mysql
+reasonable: true
+supportMethodsArguments: true
+params: count=countSql
+
+
+
+
