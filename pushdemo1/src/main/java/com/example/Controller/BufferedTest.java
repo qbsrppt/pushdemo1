@@ -38,9 +38,7 @@ public class BufferedTest {
         BufferedOutputStream bos = null;
 
         try {
-            //1.造文件
-            File srcFile = new File("D:/git/git3.0/pushdemo1/src/main/resources/static/爱情与友情.jpg");
-            File destFile = new File("D:/git/git3.0/pushdemo1/src/main/resources/static/爱情与友情111.jpg");
+          
             //2.造流
             //2.1 造节点流
             FileInputStream fis = new FileInputStream((srcFile));
