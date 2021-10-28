@@ -48,7 +48,7 @@ public class BufferedTest {
             bos = new BufferedOutputStream(fos);
 
             //3.复制的细节：读取、写入
-            byte[] buffer = new byte[1024];
+            byte[] buffer = new byte[2048];
             int len;
             while((len = bis.read(buffer)) != -1){
                 bos.write(buffer,0,len);
