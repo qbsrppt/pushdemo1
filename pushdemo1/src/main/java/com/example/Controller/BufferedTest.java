@@ -32,6 +32,8 @@ public class BufferedTest {
     //http://localhost:8080/file3/BufferStream1
     @RequestMapping("BufferStream1")
     public void BufferedStreamTest(){
+		//新增数据
+		int a=0;
         BufferedInputStream bis = null;
         BufferedOutputStream bos = null;
 
