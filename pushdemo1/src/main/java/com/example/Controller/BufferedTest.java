@@ -34,6 +34,8 @@ public class BufferedTest {
     public void BufferedStreamTest(){
         BufferedInputStream bis = null;
         BufferedOutputStream bos = null;
+		//git5.1新增了一行代码并提交
+		String s=null;
 
         try {
             //1.造文件
