@@ -32,13 +32,13 @@ public class BufferedTest {
     //http://localhost:8080/file3/BufferStream1
     @RequestMapping("BufferStream1")
     public void BufferedStreamTest(){
-		//新增数据
-		int a=0;
         BufferedInputStream bis = null;
         BufferedOutputStream bos = null;
 
         try {
-          
+            //1.造文件
+            File srcFile = new File("D:/git/git3.0/pushdemo1/src/main/resources/static/爱情与友情.jpg");
+            File destFile = new File("D:/git/git3.0/pushdemo1/src/main/resources/static/爱情与友情111.jpg");
             //2.造流
             //2.1 造节点流
             FileInputStream fis = new FileInputStream((srcFile));
@@ -48,7 +48,7 @@ public class BufferedTest {
             bos = new BufferedOutputStream(fos);
 
             //3.复制的细节：读取、写入
-            byte[] buffer = new byte[2048];
+            byte[] buffer = new byte[1024];
             int len;
             while((len = bis.read(buffer)) != -1){
                 bos.write(buffer,0,len);
