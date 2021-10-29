@@ -36,6 +36,7 @@ public class BufferedTest {
         BufferedOutputStream bos = null;
 		//git5.1新增了一行代码并提交
 		String s=null;
+		//git5.1又新增了一行注释
 
         try {
             //1.造文件
